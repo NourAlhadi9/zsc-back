@@ -7,6 +7,7 @@ import { logInfo } from "./Config/logging";
 import { logRequest } from "./Middlewares/logger-middleware";
 import { apiRules } from "./Middlewares/api-rules-middleware";
 import { TestRoutes } from "./Routes/routeTest";
+import { AuthRoutes } from "./Routes/routeAuth";
 
 const NAMESPACE = "Server";
 const router = express();
@@ -23,6 +24,7 @@ router.use( apiRules );
 
 /** Routes go here */
 router.use("/api/test", TestRoutes);
+router.use("/api/auth", AuthRoutes);
 
 /** Error handling */
 router.use( ( req, res ) => {
