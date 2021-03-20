@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS public."user" (
 	"email" TEXT NOT NULL UNIQUE,
 	"password" TEXT,
 	"username" TEXT NOT NULL UNIQUE,
-    "isAdmin" BOOLEAN DEFAULT false,
+	"isAdmin" BOOLEAN DEFAULT false,
 	"isVerified" BOOLEAN DEFAULT false,
 	CONSTRAINT user_pk PRIMARY KEY (id)
 );
